@@ -6,23 +6,22 @@ namespace DecoratorPattern.Model.Decorators
 {
     public class Rentable : Decorator
     {
-        protected List<string> borrowers = new List<string>();
-
-        // Constructor
+        protected List<string> renters = new List<string>();
+        
         public Rentable(LibraryComponent libraryComponent)
           : base(libraryComponent)
         {
         }
 
-        public void BorrowItem(string name)
+        public void RentItem(string name)
         {
-            borrowers.Add(name);
+            renters.Add(name);
             libraryComponent.NumCopies--;
         }
 
         public void ReturnItem(string name)
         {
-            borrowers.Remove(name);
+            renters.Remove(name);
             libraryComponent.NumCopies++;
         }
 
@@ -30,9 +29,9 @@ namespace DecoratorPattern.Model.Decorators
         {
             base.Display();
 
-            foreach (string borrower in borrowers)
+            foreach (string renter in renters)
             {
-                Console.WriteLine(" borrower: " + borrower);
+                Console.WriteLine(" renter: " + renter);
             }
         }
     }
