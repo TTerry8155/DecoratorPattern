@@ -24,10 +24,10 @@ namespace DecoratorPattern.Model
 
         public override void Display()
         {
-            Console.WriteLine("\nVideo");
+            Console.WriteLine("\nAudio Tape");
             Console.WriteLine(" Voice Actor: {0}", _voiceActor);
             Console.WriteLine(" Title: {0}", _title);
-            Console.WriteLine("Author: {0}", _author);
+            Console.WriteLine(" Author: {0}", _author);
             Console.WriteLine(" # Copies: {0}", NumCopies);
             Console.WriteLine(" Playtime: {0}\n", _playTime);
         }
